@@ -108,3 +108,21 @@ const toys = [{ id: 1,
             for (const toyItem of toys) {
                 console.log(`The ${toyItem.color} ${toyItem.name} costs $${toyItem.price}`)
             }
+
+            //display the toys with a 5% price increase
+            //flex goal restrict the float to two decimals
+            for (const toy of toys) {
+                toy.price *= 1.05
+                console.log(`The new price of ${toy.name} is $${toy.price}`)
+            }
+
+            //lets find a toy
+            const toyId =5
+
+            for (const toy of toys) {
+                if (toy.id === toyId)
+                {
+                    console.log(`Ah yes you are looking for the ${toy.name} toy. Details below: 
+                    ${JSON.stringify(toy)}`)
+                }
+            }
