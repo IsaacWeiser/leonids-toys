@@ -102,3 +102,9 @@ const toys = [{ id: 1,
             for (const item of toys) {
                 console.log("toy names after the 2x push: " + item.name)
             }
+
+            //print out a basic catalog of toys from the array
+
+            for (const toyItem of toys) {
+                console.log(`The ${toyItem.color} ${toyItem.name} costs $${toyItem.price}`)
+            }
