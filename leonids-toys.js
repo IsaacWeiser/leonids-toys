@@ -126,3 +126,20 @@ const toys = [{ id: 1,
                     ${JSON.stringify(toy)}`)
                 }
             }
+
+            // add to array
+            let arrAdd = (obj) => {
+                let lastIndex = toys.length - 1
+                let currentId =toys[lastIndex].id + 1
+                toys.push(obj)
+                 toys[currentId-1].id = currentId
+                 }
+        
+                 let newItem= {
+                     name: 'Heelys',
+                     maker: "Cool Kids"
+                 }
+
+                 arrAdd(newItem)
+
+console.log (toys)
