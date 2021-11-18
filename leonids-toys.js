@@ -102,3 +102,44 @@ const toys = [{ id: 1,
             for (const item of toys) {
                 console.log("toy names after the 2x push: " + item.name)
             }
+
+            //print out a basic catalog of toys from the array
+
+            for (const toyItem of toys) {
+                console.log(`The ${toyItem.color} ${toyItem.name} costs $${toyItem.price}`)
+            }
+
+            //display the toys with a 5% price increase
+            //flex goal restrict the float to two decimals
+            for (const toy of toys) {
+                toy.price *= 1.05
+                console.log(`The new price of ${toy.name} is $${toy.price}`)
+            }
+
+            //lets find a toy
+            const toyId =5
+
+            for (const toy of toys) {
+                if (toy.id === toyId)
+                {
+                    console.log(`Ah yes you are looking for the ${toy.name} toy. Details below: 
+                    ${JSON.stringify(toy)}`)
+                }
+            }
+
+            // add to array
+            let arrAdd = (obj) => {
+                let lastIndex = toys.length - 1
+                let currentId =toys[lastIndex].id + 1
+                toys.push(obj)
+                 toys[currentId-1].id = currentId
+                 }
+        
+                 let newItem= {
+                     name: 'Heelys',
+                     maker: "Cool Kids"
+                 }
+
+                 arrAdd(newItem)
+
+console.log (toys)
